@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nous contacter{% endblock %}
+{% block body %}
+ <div class="container p-4 text-bg-success text-primary">
+            <div class="home-cover text-primary mt-5"> 
+            <p class=" h2 home-cover_intro text-center"> 
+                "N'hésitez pas à nous contacter pour toutes demandes d'informations supplémentaires. Nous vous répondrons dans les meilleurs délais"
+                </p>
+           
+{{ form_start(form) }}
+    {{ form_label(form.subject) }}
+    {{ form_widget(form.subject) }}
+
+    {{form_label(form.content) }}
+    {{ form_widget(form.content) }}
+    
+    {{form_label(form.email) }}
+    {{ form_widget(form.email) }}
+   
+
+<input class="btn btn-primary" type = "submit" value="Envoyer">
+{{ form_end(form) }}
+
+   </div>
+    </div>
+
+{% endblock %}
